@@ -22,6 +22,8 @@ void function(){
 
 	$body.on('click', 'a', function(event){
 		var href = this.getAttribute('href');
+		console.log(href);
+
 		if (href.indexOf('#') == 0 || href.indexOf(':') >= 0) return;
 		
 		href = this.href;
@@ -29,7 +31,7 @@ void function(){
 		console.log('pushState', href);
 		window.history.pushState({push:true}, '', href);
 
-		load(href);
+		load("/answer");
 
 		event.preventDefault();
 	});

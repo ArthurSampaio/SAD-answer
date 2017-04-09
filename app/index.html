@@ -7,8 +7,12 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
+  <title>Sistema de Avaliação Docente</title>
+  <meta name="keywords" content="SAD, UFCG, SAD UFCG, Sistema de Avaliação Docente, Avaliação,
+  Computação, CC" /> 
+  <meta name="description" content="Sistema que ajuda a avaliar a qualidade da docência no nosso curso">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
@@ -21,7 +25,7 @@
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" sizes="192x192" href="img/icon.png">
-  <meta name="theme-color" content="#00D1F7">
+  <meta name="theme-color" content="#0056f7">
 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,7 +34,7 @@
   <link rel="apple-touch-icon-precomposed" href="img/icon.png">
 
   <m2eta name="msapplication-TileImage" content="img/icon.png">
-    <meta name="msapplication-TileColor" content="#F77F00">
+  <meta name="msapplication-TileColor" content="#0056f7">
 
 
 
@@ -40,31 +44,45 @@
 
     <div class="current-page">
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
+
 
       <div ng-view></div>
 
+
+
+
     </div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
--->
+
+
+
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+
 <script src="app.js"></script>
 <script src="home/HomeCrtl.js"></script>
-<script src="view2/view2.js"></script>
+<script src="answer/AnswerCrtl.js"></script>
+
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
 
 
-<script src="js/vendor/jquery.min.js"></script>
-<script src="js/vendor/materialize-0.97.0.min.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/materialize-0.97.0.min.js"></script>
 <script src="js/spa.js"></script>
 <script src="js/main.js"></script>
+
+<!--Models-->
+<script scr="js/models/Question.js"></script>
+<script src="js/models/Quiz.js"></script>
+
+<!--Services--> 
+<script src="js/services/answerService.js"></script>
+<script src="js/services/defaultService.js"></script>
+
+<!--Value--> 
+<script src="js/value/configValue.js"></script>
 
 </body>
 
